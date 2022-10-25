@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.media.MediaView?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.makery.cozypod.view.CozyPodController">
+   <children>
+      <SplitPane dividerPositions="0.5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="393.0" prefWidth="338.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="263.0" prefWidth="336.0">
+               <children>
+                  <ImageView fx:id="currentArt" fitHeight="239.0" fitWidth="338.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../artwork/OceanView.gif" />
+                     </image></ImageView>
+                  <Label layoutX="1.0" layoutY="30.0" prefHeight="25.0" prefWidth="336.0" text="Song Name" AnchorPane.topAnchor="0.0">
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding></Label>
+                  <MediaView fitHeight="200.0" fitWidth="200.0" layoutY="-3.0" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="63.0" prefWidth="336.0" style="-fx-background-color: lightblue;">
+               <children>
+                  <Button layoutX="154.0" layoutY="94.0" mnemonicParsing="false" onAction="#handlePlay" text="I&gt;" />
+                  <ProgressBar layoutX="-1.0" layoutY="25.0" prefHeight="3.0" prefWidth="338.0" progress="0.0" />
+                  <Button layoutX="270.0" layoutY="93.0" mnemonicParsing="false" onAction="#handleLibrary" text="Library" />
+                  <Button layoutX="203.0" layoutY="93.0" mnemonicParsing="false" onAction="#handleNext" text="&gt;&gt;" />
+                  <Button layoutX="97.0" layoutY="94.0" mnemonicParsing="false" onAction="#handlePrevious" text="&lt;&lt;" />
+                  <Slider layoutX="203.0" layoutY="59.0" prefHeight="14.0" prefWidth="119.0" />
+                  <Button layoutX="14.0" layoutY="93.0" mnemonicParsing="false" onAction="#handleArtwork" text="Artwork" />
+                  <Button layoutX="155.0" layoutY="140.0" mnemonicParsing="false" onAction="#handlePause" text="I I" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
